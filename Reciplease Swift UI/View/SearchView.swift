@@ -9,31 +9,17 @@ import SwiftUI
 
 struct SearchView: View {
     
-    @State var ingredient = ""
-    @State var listOfIngredient = ""
+    let recipe = Recipe.allRecipes()
     
     var body: some View {
-        NavigationView {
-            VStack() {
-                HStack {
-                    TextField("What's in your fridge ?", text: $ingredient).padding()
-                    Button(action: {}) {
-                        Text(.init(systemName: "plus.circle.fill")).foregroundColor(.pink).padding().font(.largeTitle)
-                    }
-                }
-                List {
-                    Section {
-                        Text("List of ingredients")
-                    }
-                    Section {
-                        ForEach(recipes) { currentRecipe in
-                            NavigationLink(destination: DetailRecipe(recipe: currentRecipe)) {
-                                 RecipeRow(recipe: currentRecipe).frame(height: 70)
-                            }
-                        }
-                    }
-                }
-            }.navigationTitle(Text("Reciplease")).navigationBarTitleDisplayMode(.inline)
+        List(self.recipe, id: \.id) { currentRecipe in
+            HStack {
+                Image(currentRecipe.image)
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .cornerRadius(16)
+                Text(currentRecipe.label)
+            }
         }
     }
 }
@@ -43,3 +29,5 @@ struct ContentView_Previews: PreviewProvider {
         SearchView()
     }
 }
+
+

@@ -18,6 +18,6 @@ struct DetailRecipe: View {
 
 struct DetailRecipe_Previews: PreviewProvider {
     static var previews: some View {
-        DetailRecipe(recipe: recipes[0])
+        DetailRecipe(recipe: Recipe.allRecipes().first!)
     }
 }
