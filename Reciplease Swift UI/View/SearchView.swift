@@ -12,14 +12,13 @@ struct SearchView: View {
     let recipe = Recipe.allRecipes()
     
     var body: some View {
-        List(self.recipe, id: \.id) { currentRecipe in
-            HStack {
-                Image(currentRecipe.image)
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .cornerRadius(16)
-                Text(currentRecipe.label)
+        NavigationView {
+            List(self.recipe, id: \.id) { currentRecipe in
+                NavigationLink(destination: RecipeDetails(recipe: currentRecipe)) {
+                    RecipeCell(recipe: currentRecipe)
+                }
             }
+            .navigationTitle("Recipes")
         }
     }
 }
@@ -31,3 +30,23 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
+
+ struct RecipeCell: View {
+     
+     let recipe: Recipe
+     
+    var body: some View {
+        HStack {
+            Image(recipe.image)
+                .resizable()
+                .frame(width: 100, height: 100)
+                .cornerRadius(16)
+            VStack {
+                Text(recipe.label)
+                Text("\(recipe.totalTime) mn")
+            }
+            .foregroundColor(Color.pink)
+            .padding()
+        }
+    }
+}
