@@ -16,6 +16,7 @@
 		5C335E9C28C7B36D00930AB8 /* Reciplease_Swift_UIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335E9B28C7B36D00930AB8 /* Reciplease_Swift_UIUITestsLaunchTests.swift */; };
 		5C335EA928CA512F00930AB8 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EA828CA512F00930AB8 /* Recipe.swift */; };
 		5C335EB028CA601E00930AB8 /* RecipeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EAF28CA601E00930AB8 /* RecipeDetails.swift */; };
+		5C335EB428CFA36700930AB8 /* CustomRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EB328CFA36700930AB8 /* CustomRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		5C335E9B28C7B36D00930AB8 /* Reciplease_Swift_UIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reciplease_Swift_UIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5C335EA828CA512F00930AB8 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		5C335EAF28CA601E00930AB8 /* RecipeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetails.swift; sourceTree = "<group>"; };
+		5C335EB328CFA36700930AB8 /* CustomRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				5C335E8028C7B36B00930AB8 /* SearchView.swift */,
+				5C335EB328CFA36700930AB8 /* CustomRow.swift */,
 				5C335EAF28CA601E00930AB8 /* RecipeDetails.swift */,
 			);
 			path = View;
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C335EB428CFA36700930AB8 /* CustomRow.swift in Sources */,
 				5C335EA928CA512F00930AB8 /* Recipe.swift in Sources */,
 				5C335E8128C7B36B00930AB8 /* SearchView.swift in Sources */,
 				5C335EB028CA601E00930AB8 /* RecipeDetails.swift in Sources */,

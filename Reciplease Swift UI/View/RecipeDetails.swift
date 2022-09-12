@@ -10,15 +10,20 @@ import SwiftUI
 struct RecipeDetails: View {
     
     let recipe: Recipe
+    @State private var zoomed  = false
     
     var body: some View {
         VStack {
             Image(recipe.image)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: zoomed ? .fill : .fit)
+                .onTapGesture {
+                    withAnimation() {
+                        self.zoomed.toggle()
+                    }
+                }
             Text(recipe.label)
-        }
-        .ignoresSafeArea()
+        }.navigationTitle(recipe.label).navigationBarTitleDisplayMode(.inline)
     }
 }
 
