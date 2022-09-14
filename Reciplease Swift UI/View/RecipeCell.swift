@@ -23,22 +23,22 @@ struct RecipeCell: View {
                     .font(.title2)
                     .foregroundColor(.pink)
                 Spacer()
-                HStack(alignment: .bottom) {
+                HStack {
                     Text("\(Image(systemName: "timer"))")
                         .foregroundColor(Color.customPink)
                     Text("\(recipe.totalTime)")
+                }
+                Spacer()
+                HStack {
                     Text("\(Image(systemName: "star.fill"))")
                         .foregroundColor(Color.customPink)
                     Text("\(recipe.yield)")
-                    Spacer()
-                    Button(action: {}) {
-                        Image(systemName: "heart")
-                            .font(.title)
-                            .foregroundColor(.gray)
-                    }
-                }.font(.title3)
-            }.padding()
+                }
+            }.padding().font(.title3)
             Spacer()
+            Text(Image(systemName: "heart"))
+                .font(.title)
+                .foregroundColor(.gray)
         }
     }
 }
