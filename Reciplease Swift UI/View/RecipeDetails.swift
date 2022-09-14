@@ -24,7 +24,8 @@ struct RecipeDetails: View {
                 }
             Text(recipe.label)
                 .foregroundColor(Color.pink)
-        }.navigationTitle(recipe.label).navigationBarTitleDisplayMode(.inline)
+            Spacer()
+        }.edgesIgnoringSafeArea(.top)
     }
 }
 
