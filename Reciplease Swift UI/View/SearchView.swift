@@ -10,16 +10,32 @@ import SwiftUI
 struct SearchView: View {
     
     let recipe = Recipe.allRecipes()
+    @State private var ingredients = ""
     
     var body: some View {
         NavigationView {
-            List(self.recipe, id: \.id) { currentRecipe in
-                NavigationLink(destination: RecipeDetails(recipe: currentRecipe)) {
-                    CustomRow(recipe: currentRecipe)
+            VStack {
+                HStack {
+                    TextField("Whats's in your frige ?", text: $ingredients)
+                        .font(.title3)
+                        .padding()
+                    Button(action: {}) {
+                        Image(systemName: "plus.circle")
+                            .font(.title3)
+                            .foregroundColor(.pink)
+                            .padding()
+                    }
                 }
+                Text("Ingredients list")
+                List(self.recipe, id: \.id) { currentRecipe in
+                    NavigationLink(destination: RecipeDetails(recipe: currentRecipe)) {
+                        RecipeCell(recipe: currentRecipe)
+                    }
+                }
+                .listStyle(GroupedListStyle())
+                .navigationTitle("Recipes")
+                .navigationBarTitleDisplayMode(.inline)
             }
-            .listStyle(GroupedListStyle())
-            .navigationTitle("Recipes")
         }
     }
 }
