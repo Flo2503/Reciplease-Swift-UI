@@ -15,9 +15,9 @@ struct RecipeCell: View {
             ZStack(alignment: .topTrailing) {
                 Image(recipe.image)
                     .resizable()
-                .aspectRatio(contentMode: .fit)
+                    .frame(height: 220)
                 Image(systemName: "heart")
-                    .font(.title)
+                    .font(.title2)
                     .foregroundColor(.customPink)
                     .background(
                         LinearGradient(
@@ -33,12 +33,12 @@ struct RecipeCell: View {
                     
             }
             Text(recipe.label)
-                .font(.title2)
+                .font(.title3)
             HStack {
                 Image(systemName: "star.fill")
                     .foregroundColor(.customPink)
                 Text("\(recipe.yield)")
-            }.font(.title3)
+            }.font(.headline)
         }
     }
 }
@@ -46,6 +46,6 @@ struct RecipeCell: View {
 struct RecipeCell_Previews: PreviewProvider {
     static var previews: some View {
         RecipeCell(recipe: Recipe.allRecipes().first!)
-            .previewLayout(.fixed(width: 400, height: 250))
+            .previewLayout(.fixed(width: 400, height: 300))
     }
 }

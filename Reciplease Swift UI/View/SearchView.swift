@@ -13,28 +13,13 @@ struct SearchView: View {
     @State private var ingredients = ""
     
     var body: some View {
-        NavigationView {
-            VStack {
-                HStack {
-                    TextField("Whats's in your frige ?", text: $ingredients)
-                        .font(.title3)
-                        .padding()
-                    Button(action: {}) {
-                        Image(systemName: "plus.circle")
-                            .font(.title3)
-                            .foregroundColor(.pink)
-                            .padding()
-                    }
-                }
-                Text("Ingredients list")
-                List(self.recipe, id: \.id) { currentRecipe in
-                    NavigationLink(destination: RecipeDetails(recipe: currentRecipe)) {
-                        RecipeCell(recipe: currentRecipe)
-                    }
-                }
-                .listStyle(GroupedListStyle())
-                .navigationTitle("Recipes")
-                .navigationBarTitleDisplayMode(.inline)
+        VStack {
+            TextField("What's in your fridge ?", text: $ingredients)
+            ScrollView(showsIndicators: false) {
+                Text("Ingredients")
+                ForEach(self.recipe, id: \.id) { currentRecipe in
+                    RecipeCell(recipe: currentRecipe)
+                }.padding(.trailing).padding(.leading)
             }
         }
     }
