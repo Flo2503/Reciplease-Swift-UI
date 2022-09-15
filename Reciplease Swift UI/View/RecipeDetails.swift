@@ -24,6 +24,7 @@ struct RecipeDetails: View {
                 }
             Text(recipe.label)
                 .foregroundColor(Color.pink)
+                .font(.title3)
             Spacer()
         }.edgesIgnoringSafeArea(.top)
     }
