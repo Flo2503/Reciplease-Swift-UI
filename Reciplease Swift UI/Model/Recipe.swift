@@ -19,8 +19,7 @@ struct Recipe: Decodable, Equatable, Identifiable {
 
 extension Recipe {
     
-    static func allRecipes() -> [Recipe]
- {
+    static func allRecipes() -> [Recipe] {
         return [
             Recipe(id: 0, label: "Omelette", image: "Omelette", url: "", yield: 1, ingredientLines: ["Oeufs", "Poivrons", "Champignons"], totalTime: 15),
             Recipe(id: 1, label: "Tacos", image: "Tacos", url: "", yield: 5, ingredientLines: ["Poulet", "Poivrons", "Fromage"], totalTime: 18),

@@ -15,22 +15,20 @@ struct RecipeCell: View {
             ZStack(alignment: .topTrailing) {
                 Image(recipe.image)
                     .resizable()
-                    .frame(height: 220)
-                Image(systemName: "heart")
-                    .font(.title2)
-                    .foregroundColor(.customPink)
-                    .background(
-                        LinearGradient(
-                            colors: [.white, .white],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                        .frame(width: 40, height: 40)
+                    .cornerRadius(17)
+                    .shadow(radius: 5)
+                    .frame(height: 200)
+                Button(action: {}) {
+                    Image(systemName: "heart")
+                        .font(.title2)
+                        .foregroundColor(.customPink)
+                        .padding()
+                        .background(Color.white)
                         .clipShape(Circle())
-                        .overlay(Circle().stroke(Color.customPink, lineWidth: 1.5))
-                    )
-                    .padding()
-                    
+                        .overlay(Circle().stroke(Color.customPink, lineWidth: 2))
+                        .frame(width: 30, height: 30)
+                        .padding()
+                }
             }
             Text(recipe.label)
                 .font(.title3)

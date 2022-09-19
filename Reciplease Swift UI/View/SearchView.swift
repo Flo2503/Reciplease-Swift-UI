@@ -9,24 +9,68 @@ import SwiftUI
 
 struct SearchView: View {
     
-    let recipe = Recipe.allRecipes()
+    private let recipe = Recipe.allRecipes()
     @State private var ingredients = ""
+    @State private var showModal = false
+    @State var selectedRecipe: Recipe
     
     var body: some View {
         VStack {
-            TextField("What's in your fridge ?", text: $ingredients)
-            ScrollView(showsIndicators: false) {
-                Text("Ingredients")
-                ForEach(self.recipe, id: \.id) { currentRecipe in
-                    RecipeCell(recipe: currentRecipe)
-                }.padding(.trailing).padding(.leading)
-            }
+            HStack {
+                TextField("What's in your fridge ?", text: $ingredients)
+                Button(action: {}) {
+                    Image(systemName: "plus.circle")
+                        .foregroundColor(.customPink)
+                        .font(.title)
+                }
+            }.padding()
+            List {
+                Section {
+                SectionTitle(title: "Your ingredients")
+                    HStack {
+                        Text("Cheese, Mushroom, Eggs")
+                            .font(.body)
+                        Spacer()
+                        Button(action: {}) {
+                            Image(systemName: "xmark.circle")
+                                .foregroundColor(.customPink)
+                                .font(.title)
+                        }
+                    }
+                }
+                Section {
+                    SectionTitle(title: "Recipes")
+                    ScrollView(showsIndicators: false) {
+                        ForEach(self.recipe, id: \.id) { currentRecipe in
+                            RecipeCell(recipe: currentRecipe)
+                                .onTapGesture {
+                                    self.showModal.toggle()
+                                    self.selectedRecipe = currentRecipe
+                                }
+                        }
+                    }.sheet(isPresented: self.$showModal) {
+                        RecipeDetails(recipe: selectedRecipe)
+                    }
+                }
+            }.listStyle(GroupedListStyle())
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        SearchView(selectedRecipe: Recipe.allRecipes().first!)
     }
 }
+
+struct SectionTitle: View {
+    
+    var title: String
+    
+    var body: some View {
+        Text(title)
+            .font(.body)
+            .foregroundColor(.gray )
+    }
+}
+

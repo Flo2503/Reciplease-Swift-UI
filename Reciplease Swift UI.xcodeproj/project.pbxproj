@@ -18,6 +18,7 @@
 		5C335EB028CA601E00930AB8 /* RecipeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EAF28CA601E00930AB8 /* RecipeDetails.swift */; };
 		5C335EB828D2332A00930AB8 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EB728D2332A00930AB8 /* RecipeCell.swift */; };
 		5C335EBA28D23E5100930AB8 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EB928D23E5100930AB8 /* CustomColor.swift */; };
+		5C335EBC28D4C6C100930AB8 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EBB28D4C6C100930AB8 /* Ingredient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		5C335EAF28CA601E00930AB8 /* RecipeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetails.swift; sourceTree = "<group>"; };
 		5C335EB728D2332A00930AB8 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		5C335EB928D23E5100930AB8 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		5C335EBB28D4C6C100930AB8 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				5C335EA828CA512F00930AB8 /* Recipe.swift */,
+				5C335EBB28D4C6C100930AB8 /* Ingredient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			files = (
 				5C335EB828D2332A00930AB8 /* RecipeCell.swift in Sources */,
 				5C335EA928CA512F00930AB8 /* Recipe.swift in Sources */,
+				5C335EBC28D4C6C100930AB8 /* Ingredient.swift in Sources */,
 				5C335E8128C7B36B00930AB8 /* SearchView.swift in Sources */,
 				5C335EB028CA601E00930AB8 /* RecipeDetails.swift in Sources */,
 				5C335E7F28C7B36B00930AB8 /* Reciplease_Swift_UIApp.swift in Sources */,
@@ -457,6 +461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Reciplease Swift UI/Preview Content\"";
+				DEVELOPMENT_TEAM = U52V863HN3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -485,6 +490,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Reciplease Swift UI/Preview Content\"";
+				DEVELOPMENT_TEAM = U52V863HN3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
