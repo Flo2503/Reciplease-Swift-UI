@@ -14,18 +14,43 @@ struct RecipeDetails: View {
     
     var body: some View {
         VStack {
-            Image(recipe.image)
-                .resizable()
-                .aspectRatio(contentMode: zoomed ? .fill : .fit)
-                .onTapGesture {
-                    withAnimation() {
-                        self.zoomed.toggle()
-                    }
+            ZStack(alignment: .topTrailing) {
+                Image(recipe.image)
+                    .resizable()
+                    .frame(height: 230)
+                    .onTapGesture {
+                        withAnimation() {
+                            self.zoomed.toggle()
+                        }
                 }
-            Text(recipe.label)
-                .foregroundColor(Color.pink)
-                .font(.title3)
-            Spacer()
+                Button(action: {}) {
+                    Image(systemName: "heart")
+                        .font(.title2)
+                        .foregroundColor(.customPink)
+                        .padding()
+                        .background(Color.white)
+                        .clipShape(Circle())
+                        .overlay(Circle().stroke(Color.customPink, lineWidth: 2))
+                        .frame(width: 40, height: 40)
+                        .padding()
+                }
+                Text(recipe.label)
+                    .foregroundColor(Color.pink)
+                    .font(.title3)
+            }
+            List {
+                ForEach(0..<recipe.ingredientLines.count) { index in
+                    Text(recipe.ingredientLines[index])
+                }
+            }
+            Button(action: {}) {
+                Text("Get directions")
+                    .font(.title3)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.pink)
+                    .cornerRadius(30)
+            }.padding()
         }.edgesIgnoringSafeArea(.top)
     }
 }
