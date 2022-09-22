@@ -34,23 +34,38 @@ struct RecipeDetails: View {
                         .frame(width: 40, height: 40)
                         .padding()
                 }
-                Text(recipe.label)
-                    .foregroundColor(Color.pink)
-                    .font(.title3)
             }
+            Text(recipe.label)
+                .foregroundColor(.pink)
+                .font(.title3)
             List {
+                Section {
+                    HStack {
+                        Image(systemName: "star.fill")
+                            .foregroundColor(.customPink)
+                        Text("\(recipe.yield)")
+                    }.font(.headline)
+                    HStack {
+                        Image(systemName: "timer")
+                            .foregroundColor(.customPink)
+                        Text("\(recipe.totalTime) mn")
+                    }.font(.headline)
+                }
+                SectionTitle(title: "Ingredients")
                 ForEach(0..<recipe.ingredientLines.count) { index in
                     Text(recipe.ingredientLines[index])
                 }
+                Section() {
+                    Button(action: {}) {
+                        HStack {
+                            Spacer()
+                            Text("Get directions")
+                                .foregroundColor(.pink)
+                            Spacer()
+                        }
+                    }
+                }
             }
-            Button(action: {}) {
-                Text("Get directions")
-                    .font(.title3)
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.pink)
-                    .cornerRadius(30)
-            }.padding()
         }.edgesIgnoringSafeArea(.top)
     }
 }
