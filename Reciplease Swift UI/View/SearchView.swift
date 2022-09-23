@@ -62,6 +62,7 @@ struct SearchView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         SearchView(selectedRecipe: Recipe.allRecipes()[1])
+
     }
 }
 #endif

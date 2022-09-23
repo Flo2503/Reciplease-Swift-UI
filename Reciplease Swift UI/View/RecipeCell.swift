@@ -13,31 +13,10 @@ struct RecipeCell: View {
      
     var body: some View {
         VStack(alignment: .leading) {
-            ZStack(alignment: .topTrailing) {
-                Image(recipe.image)
-                    .resizable()
-                    .cornerRadius(17)
-                    .shadow(radius: 5)
-                    .frame(height: 200)
-                Button(action: {}) {
-                    Image(systemName: "heart")
-                        .font(.title2)
-                        .foregroundColor(.customPink)
-                        .padding()
-                        .background(Color.white)
-                        .clipShape(Circle())
-                        .overlay(Circle().stroke(Color.customPink, lineWidth: 2))
-                        .frame(width: 30, height: 30)
-                        .padding()
-                }
-            }
+            RecipeImage(recipe: recipe, cornerRadius: 17, shadow: 5, widthHeart: 30, heightHeart: 30, heightImage: 200)
             Text(recipe.label)
                 .font(.title3)
-            HStack {
-                Image(systemName: "star.fill")
-                    .foregroundColor(.customPink)
-                Text("\(recipe.yield)")
-            }.font(.headline)
+            RecipeYield(recipe: recipe)
         }
     }
 }
@@ -49,3 +28,60 @@ struct RecipeCell_Previews: PreviewProvider {
     }
 }
 
+
+struct RecipeImage: View {
+    
+    let recipe: Recipe
+    let cornerRadius: CGFloat
+    let shadow: CGFloat
+    let widthHeart: CGFloat
+    let heightHeart: CGFloat
+    let heightImage: CGFloat
+    
+    var body: some View {
+        ZStack(alignment: .topTrailing) {
+            Image(recipe.image)
+                .resizable()
+                .cornerRadius(cornerRadius)
+                .shadow(radius: shadow)
+                .frame(height: heightImage)
+            Button(action: {}) {
+                Image(systemName: "heart")
+                    .font(.title2)
+                    .foregroundColor(.customPink)
+                    .padding()
+                    .background(Color.white)
+                    .clipShape(Circle())
+                    .overlay(Circle().stroke(Color.customPink, lineWidth: 2))
+                    .frame(width: widthHeart, height: heightHeart)
+                    .padding()
+            }
+        }
+    }
+}
+
+struct RecipeYield: View {
+    
+    let recipe: Recipe
+    
+    var body: some View {
+        HStack {
+            Image(systemName: "star.fill")
+                .foregroundColor(.customPink)
+            Text("\(recipe.yield)")
+        }.font(.headline)
+    }
+}
+
+struct RecipeTime: View {
+    
+    let recipe: Recipe
+    
+    var body: some View {
+        HStack {
+            Image(systemName: "timer")
+                .foregroundColor(.customPink)
+            Text("\(recipe.totalTime) mn")
+        }.font(.headline)
+    }
+}
