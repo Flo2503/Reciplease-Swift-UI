@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RecipeCell: View {
+    
     let recipe: Recipe
      
     var body: some View {
@@ -43,7 +44,7 @@ struct RecipeCell: View {
 
 struct RecipeCell_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeCell(recipe: Recipe.allRecipes().first!)
+        RecipeCell(recipe: Recipe.allRecipes()[0])
             .previewLayout(.fixed(width: 400, height: 300))
     }
 }

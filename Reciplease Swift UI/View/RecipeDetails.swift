@@ -52,7 +52,7 @@ struct RecipeDetails: View {
                     }.font(.headline)
                 }
                 SectionTitle(title: "Ingredients")
-                ForEach(0..<recipe.ingredientLines.count) { index in
+                ForEach(0..<recipe.ingredientLines.count, id:\.self) { index in
                     Text(recipe.ingredientLines[index])
                 }
                 Section() {

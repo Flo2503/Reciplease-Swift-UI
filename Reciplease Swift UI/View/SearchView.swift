@@ -14,6 +14,7 @@ struct SearchView: View {
     @State private var showModal = false
     @State var selectedRecipe: Recipe
     
+    
     var body: some View {
         VStack {
             HStack {
@@ -57,12 +58,14 @@ struct SearchView: View {
     }
 }
 
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView(selectedRecipe: Recipe.allRecipes().first!)
-        
+        SearchView(selectedRecipe: Recipe.allRecipes()[1])
     }
 }
+#endif
+
 
 struct SectionTitle: View {
     
