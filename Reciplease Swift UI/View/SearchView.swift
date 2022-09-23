@@ -28,15 +28,12 @@ struct SearchView: View {
             List {
                 Section {
                 SectionTitle(title: "Your ingredients")
-                    HStack {
-                        Text("Cheese, Mushroom, Eggs")
-                            .font(.body)
-                        Spacer()
-                        Button(action: {}) {
-                            Image(systemName: "xmark.circle")
-                                .foregroundColor(.customPink)
-                                .font(.title)
-                        }
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 20) {
+                            ForEach(Ingredient.all(), id: \.id) { currentIngredient in
+                                IngredientCell(ingredient: currentIngredient)
+                            }
+                        }.padding(.all, 10)
                     }
                 }
                 Section {
