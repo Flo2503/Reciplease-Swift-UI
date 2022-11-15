@@ -10,7 +10,8 @@ import SwiftUI
 struct SearchView: View {
     
     private let recipe = Recipe.allRecipes()
-    @State private var ingredients = ""
+    var ingredients: [String] = []
+    @State private var ingredient = ""
     @State private var showModal = false
     @State var selectedRecipe: Recipe
     
@@ -18,20 +19,20 @@ struct SearchView: View {
     var body: some View {
         VStack {
             HStack {
-                TextField("What's in your fridge ?", text: $ingredients)
+                TextField("What's in your fridge ?", text: $ingredient)
                 Button(action: {}) {
                     Image(systemName: "plus.circle")
                         .foregroundColor(.customPink)
                         .font(.title)
                 }
-            }.padding()
+            }.padding().font(.system(size: 18))
             List {
                 Section {
                 SectionTitle(title: "Your ingredients")
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 20) {
-                            ForEach(Ingredient.all(), id: \.id) { currentIngredient in
-                                IngredientCell(ingredient: currentIngredient)
+                            ForEach(0..<ingredients.count, id:\.self) { index in
+                                IngredientCell(ingredient: self.ingredients[index])
                             }
                         }.padding(.all, 10)
                     }
@@ -46,7 +47,8 @@ struct SearchView: View {
                                     self.selectedRecipe = currentRecipe
                                 }
                         }
-                    }.sheet(isPresented: self.$showModal) {
+                    }
+                    .sheet(isPresented: self.$showModal) {
                         RecipeDetails(recipe: selectedRecipe)
                     }
                 }
@@ -64,15 +66,15 @@ struct ContentView_Previews: PreviewProvider {
 }
 #endif
 
-
 struct SectionTitle: View {
     
     var title: String
     
     var body: some View {
         Text(title)
-            .font(.body)
+            .font(.system(size: 15))
             .foregroundColor(.gray )
     }
 }
+
 

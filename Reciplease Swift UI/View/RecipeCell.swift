@@ -69,7 +69,7 @@ struct RecipeYield: View {
             Image(systemName: "star.fill")
                 .foregroundColor(.customPink)
             Text("\(recipe.yield)")
-        }.font(.headline)
+        }.font(.system(size: 18))
     }
 }
 
@@ -82,6 +82,6 @@ struct RecipeTime: View {
             Image(systemName: "timer")
                 .foregroundColor(.customPink)
             Text("\(recipe.totalTime) mn")
-        }.font(.headline)
+        }.font(.system(size: 18))
     }
 }

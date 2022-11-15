@@ -9,24 +9,15 @@ import SwiftUI
 
 struct IngredientCell: View {
     
-    var ingredient: Ingredient
+    var ingredient = ""
     
     var body: some View {
         VStack {
             Button(action: {}) {
                 Image(systemName: "xmark.circle")
                     .foregroundColor(.customPink)
-                    .font(.title3)
             }
-            Text(ingredient.name)
-        }
+            Text(ingredient)
+        }.font(.system(size: 15))
     }
 }
-
-#if DEBUG
-struct IngredientCell_Previews: PreviewProvider {
-    static var previews: some View {
-        IngredientCell(ingredient: Ingredient.all()[0]).previewLayout(.fixed(width: 50, height: 50))
-    }
-}
-#endif

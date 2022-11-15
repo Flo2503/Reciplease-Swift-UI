@@ -9,10 +9,8 @@ import SwiftUI
 
 struct RecipeDetails: View {
     
-    @State private var zoomed  = false
     let recipe: Recipe
 
-    
     var body: some View {
         VStack {
             RecipeImage(recipe: recipe, cornerRadius: 0, shadow: 0,widthHeart: 40, heightHeart: 40, heightImage: 270)
@@ -27,6 +25,7 @@ struct RecipeDetails: View {
                 SectionTitle(title: "Ingredients")
                 ForEach(0..<recipe.ingredientLines.count, id:\.self) { index in
                     Text(recipe.ingredientLines[index])
+                        .font(.system(size: 18))
                 }
                 Section() {
                     Button(action: {}) {
@@ -35,7 +34,7 @@ struct RecipeDetails: View {
                             Text("Get directions")
                                 .foregroundColor(.pink)
                             Spacer()
-                        }
+                        }.font(.system(size: 20))
                     }
                 }
             }
