@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5C0019182924264B00495551 /* RecipesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0019172924264B00495551 /* RecipesData.swift */; };
+		5C00191B2927E8A000495551 /* RecipeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00191A2927E89F00495551 /* RecipeHeaderView.swift */; };
+		5C00191D2928372D00495551 /* AddFavoriteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00191C2928372D00495551 /* AddFavoriteButtonView.swift */; };
 		5C335E7F28C7B36B00930AB8 /* Reciplease_Swift_UIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335E7E28C7B36B00930AB8 /* Reciplease_Swift_UIApp.swift */; };
-		5C335E8128C7B36B00930AB8 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335E8028C7B36B00930AB8 /* SearchView.swift */; };
+		5C335E8128C7B36B00930AB8 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335E8028C7B36B00930AB8 /* ListView.swift */; };
 		5C335E8328C7B36D00930AB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C335E8228C7B36D00930AB8 /* Assets.xcassets */; };
 		5C335E8628C7B36D00930AB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C335E8528C7B36D00930AB8 /* Preview Assets.xcassets */; };
 		5C335E9028C7B36D00930AB8 /* Reciplease_Swift_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335E8F28C7B36D00930AB8 /* Reciplease_Swift_UITests.swift */; };
@@ -17,9 +19,7 @@
 		5C335E9C28C7B36D00930AB8 /* Reciplease_Swift_UIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335E9B28C7B36D00930AB8 /* Reciplease_Swift_UIUITestsLaunchTests.swift */; };
 		5C335EA928CA512F00930AB8 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EA828CA512F00930AB8 /* Recipe.swift */; };
 		5C335EB028CA601E00930AB8 /* RecipeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EAF28CA601E00930AB8 /* RecipeDetails.swift */; };
-		5C335EB828D2332A00930AB8 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EB728D2332A00930AB8 /* RecipeCell.swift */; };
-		5C335EBA28D23E5100930AB8 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EB928D23E5100930AB8 /* CustomColor.swift */; };
-		5C963E9628DE1BE800AE8AEA /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C963E9528DE1BE800AE8AEA /* IngredientCell.swift */; };
+		5C335EB828D2332A00930AB8 /* RecipeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EB728D2332A00930AB8 /* RecipeRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +41,11 @@
 
 /* Begin PBXFileReference section */
 		5C0019172924264B00495551 /* RecipesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesData.swift; sourceTree = "<group>"; };
+		5C00191A2927E89F00495551 /* RecipeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeHeaderView.swift; sourceTree = "<group>"; };
+		5C00191C2928372D00495551 /* AddFavoriteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFavoriteButtonView.swift; sourceTree = "<group>"; };
 		5C335E7B28C7B36B00930AB8 /* Reciplease Swift UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reciplease Swift UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C335E7E28C7B36B00930AB8 /* Reciplease_Swift_UIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reciplease_Swift_UIApp.swift; sourceTree = "<group>"; };
-		5C335E8028C7B36B00930AB8 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		5C335E8028C7B36B00930AB8 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		5C335E8228C7B36D00930AB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C335E8528C7B36D00930AB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5C335E8B28C7B36D00930AB8 /* Reciplease Swift UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reciplease Swift UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,9 +55,7 @@
 		5C335E9B28C7B36D00930AB8 /* Reciplease_Swift_UIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reciplease_Swift_UIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5C335EA828CA512F00930AB8 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		5C335EAF28CA601E00930AB8 /* RecipeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetails.swift; sourceTree = "<group>"; };
-		5C335EB728D2332A00930AB8 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
-		5C335EB928D23E5100930AB8 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
-		5C963E9528DE1BE800AE8AEA /* IngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
+		5C335EB728D2332A00930AB8 /* RecipeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRowView.swift; sourceTree = "<group>"; };
 		5C963EDB28E5FCA900AE8AEA /* Reciplease-Swift-UI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Reciplease-Swift-UI-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -92,6 +92,16 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		5C0019192926A3F300495551 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5C335E7E28C7B36B00930AB8 /* Reciplease_Swift_UIApp.swift */,
+				5C335E8028C7B36B00930AB8 /* ListView.swift */,
+				5C335EAF28CA601E00930AB8 /* RecipeDetails.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		5C335E7228C7B36B00930AB8 = {
 			isa = PBXGroup;
 			children = (
@@ -116,10 +126,10 @@
 			isa = PBXGroup;
 			children = (
 				5C963EDB28E5FCA900AE8AEA /* Reciplease-Swift-UI-Info.plist */,
-				5C335EAC28CA52B400930AB8 /* Support */,
+				5C0019192926A3F300495551 /* App */,
+				5C335EAB28CA528C00930AB8 /* Model */,
 				5C0019162924262900495551 /* Data */,
 				5C335EAA28CA528100930AB8 /* View */,
-				5C335EAB28CA528C00930AB8 /* Model */,
 				5C335E8228C7B36D00930AB8 /* Assets.xcassets */,
 				5C335E8428C7B36D00930AB8 /* Preview Content */,
 			);
@@ -154,11 +164,9 @@
 		5C335EAA28CA528100930AB8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5C335E8028C7B36B00930AB8 /* SearchView.swift */,
-				5C335EB728D2332A00930AB8 /* RecipeCell.swift */,
-				5C963E9528DE1BE800AE8AEA /* IngredientCell.swift */,
-				5C335EAF28CA601E00930AB8 /* RecipeDetails.swift */,
-				5C335EB928D23E5100930AB8 /* CustomColor.swift */,
+				5C335EB728D2332A00930AB8 /* RecipeRowView.swift */,
+				5C00191A2927E89F00495551 /* RecipeHeaderView.swift */,
+				5C00191C2928372D00495551 /* AddFavoriteButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,14 +177,6 @@
 				5C335EA828CA512F00930AB8 /* Recipe.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		5C335EAC28CA52B400930AB8 /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				5C335E7E28C7B36B00930AB8 /* Reciplease_Swift_UIApp.swift */,
-			);
-			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,14 +309,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C963E9628DE1BE800AE8AEA /* IngredientCell.swift in Sources */,
-				5C335EB828D2332A00930AB8 /* RecipeCell.swift in Sources */,
+				5C335EB828D2332A00930AB8 /* RecipeRowView.swift in Sources */,
 				5C335EA928CA512F00930AB8 /* Recipe.swift in Sources */,
-				5C335E8128C7B36B00930AB8 /* SearchView.swift in Sources */,
+				5C335E8128C7B36B00930AB8 /* ListView.swift in Sources */,
 				5C335EB028CA601E00930AB8 /* RecipeDetails.swift in Sources */,
+				5C00191D2928372D00495551 /* AddFavoriteButtonView.swift in Sources */,
 				5C0019182924264B00495551 /* RecipesData.swift in Sources */,
 				5C335E7F28C7B36B00930AB8 /* Reciplease_Swift_UIApp.swift in Sources */,
-				5C335EBA28D23E5100930AB8 /* CustomColor.swift in Sources */,
+				5C00191B2927E8A000495551 /* RecipeHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

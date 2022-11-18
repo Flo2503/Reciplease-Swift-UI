@@ -16,5 +16,3 @@ struct Recipe: Decodable, Equatable, Identifiable {
     let ingredientLines: [String]
     let totalTime: Int
 }
-
-

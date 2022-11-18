@@ -11,7 +11,7 @@ import SwiftUI
 struct Reciplease_Swift_UIApp: App {
     var body: some Scene {
         WindowGroup {
-            SearchView(selectedRecipe: Recipe.allRecipes().first!)
+            ListView()
         }
     }
 }
