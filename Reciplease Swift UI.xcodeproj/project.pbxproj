@@ -11,7 +11,7 @@
 		5C00191B2927E8A000495551 /* RecipeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00191A2927E89F00495551 /* RecipeHeaderView.swift */; };
 		5C00191D2928372D00495551 /* AddFavoriteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C00191C2928372D00495551 /* AddFavoriteButtonView.swift */; };
 		5C335E7F28C7B36B00930AB8 /* Reciplease_Swift_UIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335E7E28C7B36B00930AB8 /* Reciplease_Swift_UIApp.swift */; };
-		5C335E8128C7B36B00930AB8 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335E8028C7B36B00930AB8 /* ListView.swift */; };
+		5C335E8128C7B36B00930AB8 /* RecipesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335E8028C7B36B00930AB8 /* RecipesList.swift */; };
 		5C335E8328C7B36D00930AB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C335E8228C7B36D00930AB8 /* Assets.xcassets */; };
 		5C335E8628C7B36D00930AB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C335E8528C7B36D00930AB8 /* Preview Assets.xcassets */; };
 		5C335E9028C7B36D00930AB8 /* Reciplease_Swift_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335E8F28C7B36D00930AB8 /* Reciplease_Swift_UITests.swift */; };
@@ -21,6 +21,7 @@
 		5C335EB028CA601E00930AB8 /* RecipeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EAF28CA601E00930AB8 /* RecipeDetails.swift */; };
 		5C335EB828D2332A00930AB8 /* RecipeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EB728D2332A00930AB8 /* RecipeRowView.swift */; };
 		5C3B7366292A24C0002017C7 /* RateOrTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3B7365292A24C0002017C7 /* RateOrTimeView.swift */; };
+		5C65B8BC292A4EF200F8EEA7 /* DirectionsLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C65B8BB292A4EF200F8EEA7 /* DirectionsLinkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,7 @@
 		5C00191C2928372D00495551 /* AddFavoriteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFavoriteButtonView.swift; sourceTree = "<group>"; };
 		5C335E7B28C7B36B00930AB8 /* Reciplease Swift UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reciplease Swift UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C335E7E28C7B36B00930AB8 /* Reciplease_Swift_UIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reciplease_Swift_UIApp.swift; sourceTree = "<group>"; };
-		5C335E8028C7B36B00930AB8 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		5C335E8028C7B36B00930AB8 /* RecipesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesList.swift; sourceTree = "<group>"; };
 		5C335E8228C7B36D00930AB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C335E8528C7B36D00930AB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5C335E8B28C7B36D00930AB8 /* Reciplease Swift UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reciplease Swift UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +59,7 @@
 		5C335EAF28CA601E00930AB8 /* RecipeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetails.swift; sourceTree = "<group>"; };
 		5C335EB728D2332A00930AB8 /* RecipeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRowView.swift; sourceTree = "<group>"; };
 		5C3B7365292A24C0002017C7 /* RateOrTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateOrTimeView.swift; sourceTree = "<group>"; };
+		5C65B8BB292A4EF200F8EEA7 /* DirectionsLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsLinkView.swift; sourceTree = "<group>"; };
 		5C963EDB28E5FCA900AE8AEA /* Reciplease-Swift-UI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Reciplease-Swift-UI-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -98,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				5C335E7E28C7B36B00930AB8 /* Reciplease_Swift_UIApp.swift */,
-				5C335E8028C7B36B00930AB8 /* ListView.swift */,
+				5C335E8028C7B36B00930AB8 /* RecipesList.swift */,
 				5C335EAF28CA601E00930AB8 /* RecipeDetails.swift */,
 			);
 			path = App;
@@ -170,6 +172,7 @@
 				5C00191A2927E89F00495551 /* RecipeHeaderView.swift */,
 				5C00191C2928372D00495551 /* AddFavoriteButtonView.swift */,
 				5C3B7365292A24C0002017C7 /* RateOrTimeView.swift */,
+				5C65B8BB292A4EF200F8EEA7 /* DirectionsLinkView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,11 +318,12 @@
 				5C335EB828D2332A00930AB8 /* RecipeRowView.swift in Sources */,
 				5C335EA928CA512F00930AB8 /* Recipe.swift in Sources */,
 				5C3B7366292A24C0002017C7 /* RateOrTimeView.swift in Sources */,
-				5C335E8128C7B36B00930AB8 /* ListView.swift in Sources */,
+				5C335E8128C7B36B00930AB8 /* RecipesList.swift in Sources */,
 				5C335EB028CA601E00930AB8 /* RecipeDetails.swift in Sources */,
 				5C00191D2928372D00495551 /* AddFavoriteButtonView.swift in Sources */,
 				5C0019182924264B00495551 /* RecipesData.swift in Sources */,
 				5C335E7F28C7B36B00930AB8 /* Reciplease_Swift_UIApp.swift in Sources */,
+				5C65B8BC292A4EF200F8EEA7 /* DirectionsLinkView.swift in Sources */,
 				5C00191B2927E8A000495551 /* RecipeHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

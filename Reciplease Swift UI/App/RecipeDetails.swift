@@ -24,7 +24,7 @@ struct RecipeDetails: View {
                         .overlay(
                             AddFavoriteButtonView()
                                 .padding(.horizontal)
-                                .padding(.top, 15),
+                                .padding(.top, 30),
                             alignment: .topTrailing
                         )
                         VStack(alignment: .leading, spacing: 15) {
@@ -40,7 +40,6 @@ struct RecipeDetails: View {
                                 //: RATE
                                 RateOrTimeView(image: "star.fill", number: recipe.yield)
                             }
-                            Spacer()
                             //: INGREDIENTS LIST
                             Text("\(recipe.label) ingredients list :")
                                     .fontWeight(.bold)
@@ -49,8 +48,9 @@ struct RecipeDetails: View {
                                  item in
                                  Text("- \(item)")
                              }
+                            Spacer()
                              //: LINK
-
+                            DirectionsLinkView(recipeLabel: recipe.label)
                          } //: VSTACK
                         .padding(20)
                      } //: VSTACK
@@ -63,6 +63,6 @@ struct RecipeDetails: View {
 // MARK: - PREVIEW
 struct DetailRecipe_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeDetails(recipe: recipesData[1])
+        RecipeDetails(recipe: recipesData[2])
     }
 }
