@@ -20,6 +20,7 @@
 		5C335EA928CA512F00930AB8 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EA828CA512F00930AB8 /* Recipe.swift */; };
 		5C335EB028CA601E00930AB8 /* RecipeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EAF28CA601E00930AB8 /* RecipeDetails.swift */; };
 		5C335EB828D2332A00930AB8 /* RecipeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C335EB728D2332A00930AB8 /* RecipeRowView.swift */; };
+		5C3B7366292A24C0002017C7 /* RateOrTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3B7365292A24C0002017C7 /* RateOrTimeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		5C335EA828CA512F00930AB8 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		5C335EAF28CA601E00930AB8 /* RecipeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetails.swift; sourceTree = "<group>"; };
 		5C335EB728D2332A00930AB8 /* RecipeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRowView.swift; sourceTree = "<group>"; };
+		5C3B7365292A24C0002017C7 /* RateOrTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateOrTimeView.swift; sourceTree = "<group>"; };
 		5C963EDB28E5FCA900AE8AEA /* Reciplease-Swift-UI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Reciplease-Swift-UI-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -167,6 +169,7 @@
 				5C335EB728D2332A00930AB8 /* RecipeRowView.swift */,
 				5C00191A2927E89F00495551 /* RecipeHeaderView.swift */,
 				5C00191C2928372D00495551 /* AddFavoriteButtonView.swift */,
+				5C3B7365292A24C0002017C7 /* RateOrTimeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			files = (
 				5C335EB828D2332A00930AB8 /* RecipeRowView.swift in Sources */,
 				5C335EA928CA512F00930AB8 /* Recipe.swift in Sources */,
+				5C3B7366292A24C0002017C7 /* RateOrTimeView.swift in Sources */,
 				5C335E8128C7B36B00930AB8 /* ListView.swift in Sources */,
 				5C335EB028CA601E00930AB8 /* RecipeDetails.swift in Sources */,
 				5C00191D2928372D00495551 /* AddFavoriteButtonView.swift in Sources */,

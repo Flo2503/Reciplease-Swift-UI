@@ -14,27 +14,49 @@ struct RecipeDetails: View {
 
     // MARK: - BODY
     var body: some View {
-       VStack(alignment: .center) {
-            //: HEADER
-            RecipeHeaderView(recipe: recipe)
+        NavigationView {
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(alignment: .leading) {
+                         //: HEADER
+                        ZStack {
+                            RecipeHeaderView(recipe: recipe)
+                        } //: ZSTACK
+                        .overlay(
+                            AddFavoriteButtonView()
+                                .padding(.horizontal)
+                                .padding(.top, 15),
+                            alignment: .topTrailing
+                        )
+                        VStack(alignment: .leading, spacing: 15) {
+                            HStack {
+                                //: TITLE
+                                Text(recipe.label)
+                                    .font(.largeTitle)
+                                    .fontWeight(.heavy)
+                                    .foregroundColor(Color("ColorPink"))
+                                Spacer()
+                                //: TOTAL TIME
+                                RateOrTimeView(image: "timer", number: recipe.totalTime, unitOfMeasurement: "mn")
+                                //: RATE
+                                RateOrTimeView(image: "star.fill", number: recipe.yield)
+                            }
+                            Spacer()
+                            //: INGREDIENTS LIST
+                            Text("\(recipe.label) ingredients list :")
+                                    .fontWeight(.bold)
+                            
+                             ForEach(recipe.ingredientLines, id: \.self) {
+                                 item in
+                                 Text("- \(item)")
+                             }
+                             //: LINK
 
-            VStack(spacing: 20) {
-                //: TITLE
-                Text(recipe.label)
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .foregroundColor(Color("ColorPink"))
-                
-                //: INGREDIENTS LIST
-                List(recipe.ingredientLines, id: \.self) { item in
-                    Text(item)
-                }
-                
-                //: LINK
-
-            } //: VSTACK
-        } //: VSTACK
-       .edgesIgnoringSafeArea(.top)
+                         } //: VSTACK
+                        .padding(20)
+                     } //: VSTACK
+                } //: SCROLL
+                .edgesIgnoringSafeArea(.top)
+        } //: NAVIGATION
     }
 }
 

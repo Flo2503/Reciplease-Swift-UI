@@ -12,7 +12,20 @@ struct AddFavoriteButtonView: View {
     
     // MARK: - BODY
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {
+            //
+        }) {
+            Image(systemName: "heart")
+                .padding(6)
+                .foregroundColor(Color("ColorPink"))
+                .font(.system(size: 30))
+                .clipShape(Circle())
+                .background(Circle())
+                .foregroundColor(.white)
+                .overlay(Circle().stroke(Color("ColorPink"), lineWidth: 2))
+                
+            }
+        
     }
 }
 
