@@ -18,39 +18,38 @@ struct RecipeDetails: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(alignment: .leading) {
                          //: HEADER
-                        ZStack {
+                        ZStack(alignment: .topTrailing) {
                             RecipeHeaderView(recipe: recipe)
-                        } //: ZSTACK
-                        .overlay(
                             AddFavoriteButtonView()
-                                .padding(.horizontal)
-                                .padding(.top, 30),
-                            alignment: .topTrailing
-                        )
+                                .padding(.horizontal, 20)
+                                .padding(.vertical, 40)
+                        } //: ZSTACK
                         VStack(alignment: .leading, spacing: 15) {
                             HStack {
                                 //: TITLE
                                 Text(recipe.label)
-                                    .font(.largeTitle)
+                                    .font(.title)
                                     .fontWeight(.heavy)
                                     .foregroundColor(Color("ColorPink"))
                                 Spacer()
                                 //: TOTAL TIME
                                 RateOrTimeView(image: "timer", number: recipe.totalTime, unitOfMeasurement: "mn")
+                                    .padding(.trailing, 10)
+                                
                                 //: RATE
                                 RateOrTimeView(image: "star.fill", number: recipe.yield)
+                                    .padding(.trailing, 10)
                             }
                             //: INGREDIENTS LIST
                             Text("\(recipe.label) ingredients list :")
                                     .fontWeight(.bold)
-                            
-                             ForEach(recipe.ingredientLines, id: \.self) {
+                            ForEach(recipe.ingredientLines, id: \.self) {
                                  item in
                                  Text("- \(item)")
                              }
                             Spacer()
                              //: LINK
-                            DirectionsLinkView(recipeLabel: recipe.label)
+                            DirectionsLinkView(recipeLabel: recipe.label, recipeUrl: recipe.url)
                          } //: VSTACK
                         .padding(20)
                      } //: VSTACK
