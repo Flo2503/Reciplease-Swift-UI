@@ -10,27 +10,33 @@ import SwiftUI
 struct SearchRecipes: View {
     // MARK: - PROPERTIES
     
+    @State var ingredients: [String] = []
+    
     // MARK: - BODY
     var body: some View {
         VStack() {
             Text("Reciplease")
                 .fontWeight(.heavy)
                 .font(.title)
-                .foregroundColor(Color("ColorPink"))
+                .foregroundColor(.accentColor)
             //: TEXTFIELD
-            SearchPanelView()
+            SearchPanelView(ingredientsList: $ingredients)
             //: INGREDIENTS LIST
-            GroupBox(label: Text("Your ingredients :")) {
-                List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-                   Text("Gnééééé")
-               }
-            } //: GROUPBOX
+            VStack {
+                Text("Your ingredients :")
+                    .padding(.trailing, 200)
+                    .foregroundColor(.accentColor)
+                List(ingredients, id: \.self) { item in
+                    Text(item)
+                }
+            }
         } //: VSTACK
     }
 }
 
 // MARK: - PREVIEW
 struct SearchRecipes_Previews: PreviewProvider {
+    @State static var ingredientsPreview: [String] = ["Oignon", "Cheese"]
     static var previews: some View {
         SearchRecipes()
     }

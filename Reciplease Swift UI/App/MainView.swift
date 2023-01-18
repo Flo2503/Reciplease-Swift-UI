@@ -20,7 +20,6 @@ struct MainView: View {
                     Image(systemName: "star")
                     Text("Favorites")
                 }
-
         }
     }
 }

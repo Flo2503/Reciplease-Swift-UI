@@ -9,21 +9,24 @@ import SwiftUI
 
 struct SearchPanelView: View {
     // MARK: - PROPERTIES
-    @State private var ingredient: String = ""
-    @State var ingredientsList: [String] = []
+    @State private var inputText: String = ""
+    @Binding var ingredientsList: [String]
     
     // MARK: - BODY
     var body: some View {
         HStack() {
-            TextField("What's in your fridge ?", text: $ingredient)
+            TextField("What's in your fridge ?", text: $inputText)
                 .padding()
                 .padding(.vertical, 10)
             Button(action: {
-                ingredientsList.append(ingredient)
+                if !inputText.isEmpty {
+                    ingredientsList.append(inputText)
+                    self.inputText = ""
+                }
             }) {
                 Image(systemName: "plus.circle")
                     .font(.system(size: 30))
-                    .foregroundColor(Color("ColorPink"))
+                    .foregroundColor(.accentColor)
                     .padding(.trailing)
             }
         } //: HSTACK
@@ -32,8 +35,9 @@ struct SearchPanelView: View {
 
 // MARK: - PREVIEW
 struct SearchPanelView_Previews: PreviewProvider {
+    @State static var ingredientsPreview: [String] = ["Oignon", "Cheese"]
     static var previews: some View {
-        SearchPanelView()
+        SearchPanelView(ingredientsList: $ingredientsPreview)
             .previewLayout(.sizeThatFits)
             .padding()
     }

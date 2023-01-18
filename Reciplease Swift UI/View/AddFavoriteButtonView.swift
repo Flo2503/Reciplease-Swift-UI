@@ -17,7 +17,7 @@ struct AddFavoriteButtonView: View {
         }) {
             Image(systemName: "heart")
                 .padding(6)
-                .foregroundColor(Color("ColorPink"))
+                .foregroundColor(.accentColor)
                 .font(.system(size: 25))
                 .clipShape(Circle())
                 .background(Circle())

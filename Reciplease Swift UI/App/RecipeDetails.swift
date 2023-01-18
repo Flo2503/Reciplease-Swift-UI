@@ -30,7 +30,7 @@ struct RecipeDetails: View {
                                 Text(recipe.label)
                                     .font(.title)
                                     .fontWeight(.heavy)
-                                    .foregroundColor(Color("ColorPink"))
+                                    .foregroundColor(.accentColor)
                                 Spacer()
                                 //: TOTAL TIME
                                 RateOrTimeView(image: "timer", number: recipe.totalTime, unitOfMeasurement: "mn")
