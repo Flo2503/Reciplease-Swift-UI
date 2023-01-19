@@ -21,13 +21,28 @@ struct SearchRecipes: View {
                 .foregroundColor(.accentColor)
             //: TEXTFIELD
             SearchPanelView(ingredientsList: $ingredients)
+                .padding(.horizontal ,4)
             //: INGREDIENTS LIST
             VStack {
-                Text("Your ingredients :")
-                    .padding(.trailing, 200)
+                HStack() {
+                    Text("Your ingredients :")
+                        .padding()
                     .foregroundColor(.accentColor)
-                List(ingredients, id: \.self) { item in
-                    Text(item)
+                    Spacer()
+                    Button("Clear" ,action: {
+                        ingredients.removeAll()
+                    })
+                    .buttonStyle(.bordered)
+                    .cornerRadius(20)
+                } //: HSTACK
+                .padding(.horizontal, 6)
+                List {
+                    ForEach(ingredients, id: \.self) { item in
+                        Text(item)
+                    }
+                    .onDelete { indexSet in
+                        ingredients.remove(atOffsets: indexSet)
+                    }
                 }
             }
         } //: VSTACK

@@ -23,7 +23,6 @@ struct AddFavoriteButtonView: View {
                 .background(Circle())
                 .foregroundColor(.white)
                 .overlay(Circle().stroke(Color("ColorPink"), lineWidth: 2))
-                
             }
         
     }

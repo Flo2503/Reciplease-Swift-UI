@@ -50,7 +50,7 @@
 		5C0019172924264B00495551 /* RecipesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesData.swift; sourceTree = "<group>"; };
 		5C00191A2927E89F00495551 /* RecipeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeHeaderView.swift; sourceTree = "<group>"; };
 		5C00191C2928372D00495551 /* AddFavoriteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFavoriteButtonView.swift; sourceTree = "<group>"; };
-		5C22064A292ABDE800D79EC7 /* SearchPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPanelView.swift; sourceTree = "<group>"; };
+		5C22064A292ABDE800D79EC7 /* SearchPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPanelView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		5C335E7B28C7B36B00930AB8 /* Reciplease Swift UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reciplease Swift UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C335E7E28C7B36B00930AB8 /* Reciplease_Swift_UIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reciplease_Swift_UIApp.swift; sourceTree = "<group>"; };
 		5C335E8028C7B36B00930AB8 /* RecipesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesList.swift; sourceTree = "<group>"; };

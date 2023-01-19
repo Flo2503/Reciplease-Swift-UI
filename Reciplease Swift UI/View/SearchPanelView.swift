@@ -18,17 +18,14 @@ struct SearchPanelView: View {
             TextField("What's in your fridge ?", text: $inputText)
                 .padding()
                 .padding(.vertical, 10)
-            Button(action: {
+            Button("Add", action: {
                 if !inputText.isEmpty {
                     ingredientsList.append(inputText)
                     self.inputText = ""
                 }
-            }) {
-                Image(systemName: "plus.circle")
-                    .font(.system(size: 30))
-                    .foregroundColor(.accentColor)
-                    .padding(.trailing)
-            }
+            })
+            .buttonStyle(.bordered)
+            .cornerRadius(20)
         } //: HSTACK
     }
 }
